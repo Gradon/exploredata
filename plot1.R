@@ -7,7 +7,7 @@ NEIdata <- readRDS("summarySCC_PM25.rds")
 SCCmap <- readRDS("Source_Classification_Code.rds")
 
 # total up the PM2.5 emissions by year
-totalemissions <- with(NEIdata, tapply(NEIdata$Emissions, NEIdata$year, sum))
+totalemissions <- with(NEIdata, tapply(Emissions, year, sum))
 
 # open file device for plotting
 png(filename = "plot1.png", width = 480, height = 480)
